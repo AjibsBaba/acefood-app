@@ -10,15 +10,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.ajibsbaba.acefood_compose.components.Button
-import com.ajibsbaba.acefood_compose.components.EmailFormInput
-import com.ajibsbaba.acefood_compose.components.ModelAppBar
-import com.ajibsbaba.acefood_compose.components.PasswordFormInput
+import com.ajibsbaba.acefood_compose.components.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showSystemUi = true)
 @Composable
-fun ResetPasswordForm() {
+fun RegistrationForm() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -29,7 +26,7 @@ fun ResetPasswordForm() {
             modifier = Modifier
                 .padding(top = 24.dp, bottom = 24.dp)
                 .align(alignment = Alignment.CenterHorizontally),
-            text = "Reset Password",
+            text = "Register",
             fontWeight = FontWeight(800),
             fontSize = 32.sp
         )
@@ -39,13 +36,21 @@ fun ResetPasswordForm() {
                 .padding(start = 12.dp, end = 12.dp, bottom = 24.dp)
         ) {
             EmailFormInput()
+            Spacer(modifier = Modifier.height(8.dp))
+            FirstNameFormInput()
+            Spacer(modifier = Modifier.height(8.dp))
+            LastNameFormInput()
+            Spacer(modifier = Modifier.height(8.dp))
+            PasswordFormInput()
+            Spacer(modifier = Modifier.height(8.dp))
+            ConfirmPasswordFormInput()
             Column(modifier = Modifier.padding(top = 24.dp)) {
-                Button(text = "Send Email")
+                Button(text = "Register")
                 Text(
                     modifier = Modifier
                         .align(alignment = Alignment.CenterHorizontally)
                         .padding(top = 12.dp),
-                    text = "Don’t have an account? Register", fontWeight = FontWeight(400),
+                    text = "Already have an account? Login", fontWeight = FontWeight(400),
                     fontSize = 14.sp
                 )
             }

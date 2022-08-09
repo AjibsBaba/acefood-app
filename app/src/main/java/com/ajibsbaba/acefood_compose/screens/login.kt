@@ -18,7 +18,7 @@ import com.ajibsbaba.acefood_compose.components.PasswordFormInput
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showSystemUi = true)
 @Composable
-fun ResetPasswordForm() {
+fun LoginForm() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -29,7 +29,7 @@ fun ResetPasswordForm() {
             modifier = Modifier
                 .padding(top = 24.dp, bottom = 24.dp)
                 .align(alignment = Alignment.CenterHorizontally),
-            text = "Reset Password",
+            text = "Login",
             fontWeight = FontWeight(800),
             fontSize = 32.sp
         )
@@ -39,13 +39,15 @@ fun ResetPasswordForm() {
                 .padding(start = 12.dp, end = 12.dp, bottom = 24.dp)
         ) {
             EmailFormInput()
+            Spacer(modifier = Modifier.height(8.dp))
+            PasswordFormInput()
             Column(modifier = Modifier.padding(top = 24.dp)) {
-                Button(text = "Send Email")
+                Button()
                 Text(
                     modifier = Modifier
                         .align(alignment = Alignment.CenterHorizontally)
                         .padding(top = 12.dp),
-                    text = "Don’t have an account? Register", fontWeight = FontWeight(400),
+                    text = "Did you forget your password? Reset", fontWeight = FontWeight(400),
                     fontSize = 14.sp
                 )
             }
