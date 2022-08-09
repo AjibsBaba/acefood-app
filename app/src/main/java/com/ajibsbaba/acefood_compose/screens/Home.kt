@@ -159,7 +159,7 @@ fun ActionSections() {
 
 @Composable
 fun RecentScans() {
-    Column() {
+    Column {
         Text(text = "Recent Scans", fontWeight = FontWeight.ExtraBold, fontSize = 20.sp)
         Spacer(modifier = Modifier.height(16.dp))
         Row(modifier = Modifier.padding()) {
@@ -176,13 +176,13 @@ fun RecentScans() {
                         .padding(16.dp)
                         .fillMaxWidth()
                 ) {
-                    Row() {
+                    Row {
                         Image(
                             painter = painterResource(R.drawable.white_circle),
                             contentDescription = "TODO"
                         )
                         Spacer(modifier = Modifier.width(24.dp))
-                        Column() {
+                        Column {
                             Text(
                                 text = "Tomato",
                                 fontWeight = FontWeight.ExtraBold,
@@ -195,7 +195,7 @@ fun RecentScans() {
                             )
                         }
                     }
-                    Column() {
+                    Column {
                         Text(text = "73%", fontWeight = FontWeight.Light, fontSize = 12.sp)
                         Text(text = "Accuracy", fontWeight = FontWeight.Light, fontSize = 12.sp)
                     }
@@ -219,13 +219,13 @@ fun RecentScans() {
                         .padding(16.dp)
                         .fillMaxWidth()
                 ) {
-                    Row() {
+                    Row {
                         Image(
                             painter = painterResource(R.drawable.white_circle),
                             contentDescription = "TODO"
                         )
                         Spacer(modifier = Modifier.width(24.dp))
-                        Column() {
+                        Column {
                             Text(
                                 text = "Tomato",
                                 fontWeight = FontWeight.ExtraBold,
@@ -234,7 +234,7 @@ fun RecentScans() {
                             Text(text = "Healthy", fontSize = 12.sp, fontWeight = FontWeight.Light)
                         }
                     }
-                    Column() {
+                    Column {
                         Text(text = "84%", fontWeight = FontWeight.Light, fontSize = 12.sp)
                         Text(text = "Accuracy", fontWeight = FontWeight.Light, fontSize = 12.sp)
                     }
